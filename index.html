@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SERVO | خدمات منزلية متكاملة — البحرين</title>
+  <meta name="description" content="SERVO — منصة خدمات منزلية متكاملة في البحرين. تكييف، سباكة، كهرباء، تنظيف، مكافحة حشرات، وخدمات أخرى. احجز الآن واحصل على خدمة موثوقة." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body class="page-ar">
+
+  <!-- ===== TOP NAV ===== -->
+  <header class="site-header" id="siteHeader">
+    <nav class="nav container">
+      <a href="#" class="brand" aria-label="SERVO Home">
+        <span class="brand-mark">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="2" y="2" width="32" height="32" rx="8" fill="#082D44"/>
+            <path d="M18 9 L27 22 H22.5 L18 14.5 L13.5 22 H9 L18 9 Z" fill="#D4B483"/>
+            <rect x="12" y="23.5" width="12" height="2.5" rx="1.25" fill="#0E5A7A"/>
+            <rect x="9" y="27" width="18" height="1.5" rx="0.75" fill="#F8F6F2" opacity="0.35"/>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <strong>SERVO</strong>
+          <small>خدمات منزلية</small>
+        </span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="فتح القائمة" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="navLinks">
+        <a href="#services">خدماتنا</a>
+        <a href="#how">كيف تعمل</a>
+        <a href="#why">لماذا SERVO</a>
+        <a href="#areas">مناطق الخدمة</a>
+        <a href="#contact">تواصل معنا</a>
+        <button class="lang-btn" id="arEnToggle" type="button">EN</button>
+      </div>
+      <a href="#booking" class="nav-cta">احجز الآن</a>
+    </nav>
+    <div class="nav-drawer" id="navDrawer">
+      <a href="#services">خدماتنا</a>
+      <a href="#how">كيف تعمل</a>
+      <a href="#why">لماذا SERVO</a>
+      <a href="#areas">مناطق الخدمة</a>
+      <a href="#contact">تواصل معنا</a>
+      <button class="lang-btn" type="button" onclick="location.href='en.html'">الإنجليزية</button>
+    </div>
+  </header>
+
+  <main>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="top">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <span class="hero-eyebrow">منصة الخدمات المنزلية · البحرين</span>
+        <h1>خدمات منزلية متكاملة<br/><span class="grad">بجودةٍ وموثوقية</span></h1>
+        <p class="hero-sub">من الصيانة والتنظيف إلى التكييف والكهرباء — كل ما يحتاجه منزلك في مكان واحد، بضغطة زر.</p>
+        <div class="hero-actions">
+          <a href="#booking" class="btn btn-primary btn-lg">احجز الآن</a>
+          <a href="#services" class="btn btn-ghost btn-lg">اكتشف خدماتنا</a>
+        </div>
+        <ul class="hero-stats" aria-label="مؤشرات الجودة">
+          <li><strong>9</strong><span>فئات خدمات</span></li>
+          <li><strong>4</strong><span>محافظة تغطية</span></li>
+          <li><strong>24/7</strong><span>دعم فني</span></li>
+        </ul>
+      </div>
+
+      <!-- Booking widget in hero -->
+      <div class="hero-card" id="booking">
+        <div class="hero-card-head">
+          <h2>احجز خدمتك</h2>
+          <p>املأ الحقول وسنراسلك للتأكيد خلال دقائق.</p>
+        </div>
+        <form id="heroBookingForm" class="hero-form" novalidate>
+          <div class="field">
+            <label for="bkService">الخدمة</label>
+            <select id="bkService" required>
+              <option value="" disabled selected>اختر خدمة</option>
+              <option value="ac">تكييف وتبريد</option>
+              <option value="plumbing">سباكة</option>
+              <option value="electrical">كهرباء</option>
+              <option value="cleaning">تنظيف منزلي</option>
+              <option value="pest">مكافحة حشرات</option>
+              <option value="carpentry">نجارة وألمنيوم</option>
+              <option value="painting">دهانات وتشطيب</option>
+              <option value="moving">نقل وتركيب</option>
+              <option value="specialized">خدمات متخصصة</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="bkArea">المحافظة</label>
+            <select id="bkArea" required>
+              <option value="" disabled selected>اختر المحافظة</option>
+              <option value="capital">العاصمة</option>
+              <option value="muharraq">محرق</option>
+              <option value="northern">الشمالية</option>
+              <option value="southern">الجنوبية</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="bkDate">التاريخ</label>
+            <input type="date" id="bkDate" required />
+          </div>
+          <div class="field">
+            <label for="bkPhone">رقم الجوال (+973)</label>
+            <input type="tel" id="bkPhone" inputmode="numeric" maxlength="8" placeholder="12345678" required pattern="\d{8}" />
+          </div>
+          <div class="field">
+            <label for="bkNotes">ملاحظات (اختياري)</label>
+            <textarea id="bkNotes" rows="2" placeholder="وصف موجز للمشكلة أو الخدمة المطلوبة"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block" id="bkSubmit">إرسال الطلب</button>
+          <p class="field-note">سيتم تأكيد طلبك عبر الهاتف أو واتساب. البيانات مستخدمة للتحقق فقط.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TRUST STRIP ===== -->
+  <section class="trust" aria-label="لماذا تثق بنا">
+    <div class="container trust-grid">
+      <div class="trust-item">
+        <span class="trust-icon">✓</span>
+        <h3>تأكيد قبل البدء</h3>
+        <p>كل طلب يتم التحقق منه هاتفياً قبل بدء الخدمة.</p>
+      </div>
+      <div class="trust-item">
+        <span class="trust-icon">⏱</span>
+        <h3>وصول في الموعد</h3>
+        <p>نلتزم بنافذة زمنية محددة مع متابعة لحظية.</p>
+      </div>
+      <div class="trust-item">
+        <span class="trust-icon">🛡</span>
+        <h3>ضمان الخدمة</h3>
+        <p>خدماتنا مشمولة بضمان يغطي جودة العمل.</p>
+      </div>
+      <div class="trust-item">
+        <span class="trust-icon">💬</span>
+        <h3>دعم 24/7</h3>
+        <p>فريق دعم متواصل معك عبر الهاتف والواتساب.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="sec-head">
+        <span class="sec-eyebrow">خدماتنا</span>
+        <h2>كل ما يحتاجه منزلك</h2>
+        <p>تسع فئات خدمات رئيسية تغطي الصيانة والتنظيف والتشطيب.</p>
+      </div>
+      <div class="services-grid">
+        <article class="svc-card" data-svc="ac">
+          <div class="svc-ico" aria-hidden="true">❄</div>
+          <h3>تكييف وتبريد</h3>
+          <p>صيانة وتنظيف ومعالجة تسرب وتعبئة فريون وتركيب وحدات جديدة.</p>
+          <a href="#booking" class="svc-link" data-svc="ac">احجز هذه الخدمة</a>
+        </article>
+        <article class="svc-card" data-svc="plumbing">
+          <div class="svc-ico" aria-hidden="true">🔧</div>
+          <h3>سباكة</h3>
+          <p>معالجة تسرب، انسداد، تركيب صنابير وخزانات، وفحص شبكات صرف.</p>
+          <a href="#booking" class="svc-link" data-svc="plumbing">احجز هذه الخدمة</a>
+        </article>
+        <article class="svc-card" data-svc="electrical">
+          <div class="svc-ico" aria-hidden="true">⚡</div>
+          <h3>كهرباء</h3>
+          <p>أعطال وتأسيس لوحات، أحمال كهربائية، إنارة، وكشف عيوب.</p>
+          <a href="#booking" class="svc-link" data-svc="electrical">احجز هذه الخدمة</a>
+        </article>
+        <article class="svc-card" data-svc="cleaning">
+          <div class="svc-ico" aria-hidden="true">🧹</div>
+          <h3>تنظيف منزلي</h3>
+          <p>تنظيف شامل، عميق، بعد الإنشاء، وغسيل سجاد ومفروشات.</p>
+          <a href="#booking" class="svc-link" data-svc="cleaning">احجز هذه الخدمة</a>
+        </article>
+        <article class="svc-card" data-svc="pest">
+          <div class="svc-ico" aria-hidden="true">🛡</div>
+          <h3>مكافحة حشرات</h3>
+          <p>معالجة مبيدات آمنة، رش وقائي، ومكافحة برغش وقوارض وفئران.</p>
+          <a href="#booking" class="svc-link" data-svc="pest">احجز هذه الخدمة</a>
+        </article>
+        <article class="svc-card" data-svc="carpentry">
+          <div class="svc-ico" aria-hidden="true">🪚</div>
+          <h3>نجارة وألمنيوم</h3>
+          <p>صيانة أبواب ونوافذ، تركيب ألمنيوم، وأعمال خشب وتشطيب.</p>
+          <a href="#booking" class="svc-link" data-svc="carpentry">احجز هذه الخدمة</a>
+        </article>
+        <article class="svc-card" data-svc="painting">
+          <div class="svc-ico" aria-hidden="true">🎨</div>
+          <h3>دهانات وتشطيب</h3>
+          <p>دهانات داخلية وخارجية، جبس، بلاط، وإصلاحات تشطيب.</p>
+          <a href="#booking" class="svc-link" data-svc="painting">احجز هذه الخدمة</a>
+        </article>
+        <article class="svc-card" data-svc="moving">
+          <div class="svc-ico" aria-hidden="true">📦</div>
+          <h3>نقل وتركيب</h3>
+          <p>نقل أثاث، تركيب أدوات ومفروشات، وتغليف وتأمين أثناء النقل.</p>
+          <a href="#booking" class="svc-link" data-svc="moving">احجز هذه الخدمة</a>
+        </article>
+        <article class="svc-card" data-svc="specialized">
+          <div class="svc-ico" aria-hidden="true">✦</div>
+          <h3>خدمات متخصصة</h3>
+          <p>خدمات إضافية حسب الطلب — استشارة، صيانة متقدمة، ومشاريع.</p>
+          <a href="#booking" class="svc-link" data-svc="specialized">احجز هذه الخدمة</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HOW IT WORKS ===== -->
+  <section class="section section-alt" id="how">
+    <div class="container">
+      <div class="sec-head">
+        <span class="sec-eyebrow">كيف تعمل المنصة</span>
+        <h2>أربع خطوات بسيطة</h2>
+      </div>
+      <ol class="steps">
+        <li class="step">
+          <span class="step-num">1</span>
+          <h3>اختر الخدمة</h3>
+          <p>حدد نوع الخدمة والمحافظة والمنطقة.</p>
+        </li>
+        <li class="step">
+          <span class="step-num">2</span>
+          <h3>حدد الوقت</h3>
+          <p>اختر التاريخ والنافذة الزمنية الأنسب.</p>
+        </li>
+        <li class="step">
+          <span class="step-num">3</span>
+          <h3>تأكيد الطلب</h3>
+          <p>سنتواصل معك هاتفياً أو واتساب لتأكيد التفاصيل.</p>
+        </li>
+        <li class="step">
+          <span class="step-num">4</span>
+          <h3>استلم الخدمة</h3>
+          <p>يقوم الفني بالوصول في الموعد مع ضمان الجودة.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===== WHY ===== -->
+  <section class="section" id="why">
+    <div class="container">
+      <div class="sec-head">
+        <span class="sec-eyebrow">لماذا SERVO</span>
+        <h2>ثقة، جودة، وسرعة</h2>
+        <p>بنينا SERVO لتكون منصة خدمات منزلية موثوقة في البحرين — بدون تسويق زائف.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-item">
+          <h3>شفافية كاملة</h3>
+          <p>أسعار واضحة، حالة طلب ملاحَظة، وتأكيد قبل أي التزام.</p>
+        </div>
+        <div class="why-item">
+          <h3>تغطية شاملة</h3>
+          <p>العاصمة، المحرق، الشمالية، والجنوبية — أينما كنت.</p>
+        </div>
+        <div class="why-item">
+          <h3>متابعة بعد الخدمة</h3>
+          <p>ندعمك بعد استلام الخدمة، وليس قبلها فقط.</p>
+        </div>
+        <div class="why-item">
+          <h3>اللغتان عربياً وإنجليزياً</h3>
+          <p>واجهة كاملة بالعربية والإنجليزية، بنفس الجودة.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== AREAS ===== -->
+  <section class="section section-alt" id="areas">
+    <div class="container">
+      <div class="sec-head">
+        <span class="sec-eyebrow">مناطق الخدمة</span>
+        <h2>نتواجد حيث تتركز الخدمات</h2>
+      </div>
+      <div class="areas-grid">
+        <div class="area"><h3>العاصمة</h3><p>الرفاع، المحرم، المنامة، عالي، السواري</p></div>
+        <div class="area"><h3>المحرق</h3><p>مدينة عيسى، صفر، سترة، الحد الشمالية</p></div>
+        <div class="area"><h3>الشمالية</h3><p>المحرق الشمالية، الجسرة، أبوصيبع</p></div>
+        <div class="area"><h3>الجنوبية</h3><p>الرفاع الجنوبية، الكورنيش، الزبارة</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section" id="contact">
+    <div class="container contact">
+      <div class="sec-head sec-center">
+        <span class="sec-eyebrow">تواصل معنا</span>
+        <h2>جاهزون لخدمتك</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-item">
+          <span class="c-ico">📞</span>
+          <h3>الهاتف</h3>
+          <p><a href="tel:+973-1700-0000" dir="ltr" style="unicode-bidi:plaintext;">+973 1700 0000</a></p>
+        </div>
+        <div class="contact-item">
+          <span class="c-ico">💬</span>
+          <h3>واتساب</h3>
+          <p><a href="https://wa.me/97317000000" target="_blank" rel="noopener">راسلنا عبر واتساب</a></p>
+        </div>
+        <div class="contact-item">
+          <span class="c-ico">✉</span>
+          <h3>البريد</h3>
+          <p><a href="mailto:hello@servo.bh">hello@servo.bh</a></p>
+        </div>
+        <div class="contact-item">
+          <span class="c-ico">🕑</span>
+          <h3>ساعات العمل</h3>
+          <p>السبت – الخميس · 8:00 ص – 8:00 م</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="f-col f-brand">
+        <div class="brand brand-sm">
+          <span class="brand-mark">
+            <svg width="28" height="28" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="2" y="2" width="32" height="32" rx="8" fill="#0E5A7A"/>
+              <path d="M18 9 L27 22 H22.5 L18 14.5 L13.5 22 H9 L18 9 Z" fill="#D4B483"/>
+            </svg>
+          </span>
+          <span class="brand-text"><strong>SERVO</strong><small>خدمات منزلية</small></span>
+        </div>
+        <p class="f-tag">منصة الخدمات المنزلية الموثوقة في مملكة البحرين.</p>
+        <div class="f-cta"><a href="#booking" class="btn btn-primary">احجز الآن</a></div>
+      </div>
+      <div class="f-col">
+        <h4>خدماتنا</h4>
+        <ul>
+          <li><a href="#services">تكييف وتبريد</a></li>
+          <li><a href="#services">سباكة وكهرباء</a></li>
+          <li><a href="#services">تنظيف عميق</a></li>
+          <li><a href="#services">مكافحة حشرات</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h4>المنصة</h4>
+        <ul>
+          <li><a href="#how">كيف تعمل</a></li>
+          <li><a href="#why">لماذا SERVO</a></li>
+          <li><a href="#areas">مناطق الخدمة</a></li>
+          <li><a href="#contact">تواصل معنا</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h4>الحساب</h4>
+        <ul>
+          <li><a href="#">الشروط والأحكام</a></li>
+          <li><a href="#">سياسة الخصوصية</a></li>
+          <li><a href="#">سياسة الإلغاء</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="f-bottom container">
+      <p>© 2026 SERVO. All rights reserved.</p>
+      <p class="f-en"><a href="en.html">English</a></p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

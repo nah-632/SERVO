@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SERVO | Premium Home Services — Bahrain</title>
+  <meta name="description" content="SERVO — a premium home services platform in Bahrain. AC, plumbing, electrical, cleaning, pest control, and more. Book now and get reliable, on-time service." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body class="page-en">
+
+  <!-- ===== TOP NAV ===== -->
+  <header class="site-header" id="siteHeader">
+    <nav class="nav container">
+      <a href="#" class="brand" aria-label="SERVO Home">
+        <span class="brand-mark">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="2" y="2" width="32" height="32" rx="8" fill="#082D44"/>
+            <path d="M18 9 L27 22 H22.5 L18 14.5 L13.5 22 H9 L18 9 Z" fill="#D4B483"/>
+            <rect x="12" y="23.5" width="12" height="2.5" rx="1.25" fill="#0E5A7A"/>
+            <rect x="9" y="27" width="18" height="1.5" rx="0.75" fill="#F8F6F2" opacity="0.35"/>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <strong>SERVO</strong>
+          <small>Home Services</small>
+        </span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="navLinks">
+        <a href="#services">Services</a>
+        <a href="#how">How It Works</a>
+        <a href="#why">Why SERVO</a>
+        <a href="#areas">Coverage</a>
+        <a href="#contact">Contact</a>
+        <button class="lang-btn" id="arEnToggle" type="button">AR</button>
+      </div>
+      <a href="#booking" class="nav-cta">Book Now</a>
+    </nav>
+    <div class="nav-drawer" id="navDrawer">
+      <a href="#services">Services</a>
+      <a href="#how">How It Works</a>
+      <a href="#why">Why SERVO</a>
+      <a href="#areas">Coverage</a>
+      <a href="#contact">Contact</a>
+      <button class="lang-btn" type="button" onclick="location.href='index.html'">العربية</button>
+    </div>
+  </header>
+
+  <main>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="top">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <span class="hero-eyebrow">Home Services Platform · Bahrain</span>
+        <h1>Complete Home Services<br/><span class="grad">Built on Trust</span></h1>
+        <p class="hero-sub">From AC and plumbing to cleaning and electrical — everything your home needs, in one place.</p>
+        <div class="hero-actions">
+          <a href="#booking" class="btn btn-primary btn-lg">Book Now</a>
+          <a href="#services" class="btn btn-ghost btn-lg">Explore Services</a>
+        </div>
+        <ul class="hero-stats" aria-label="Quality indicators">
+          <li><strong>9</strong><span>Service Categories</span></li>
+          <li><strong>4</strong><span>Governorates</span></li>
+          <li><strong>24/7</strong><span>Support</span></li>
+        </ul>
+      </div>
+
+      <!-- Booking widget in hero -->
+      <div class="hero-card" id="booking">
+        <div class="hero-card-head">
+          <h2>Book a Service</h2>
+          <p>Fill in the details and we'll confirm within minutes.</p>
+        </div>
+        <form id="heroBookingForm" class="hero-form" novalidate>
+          <div class="field">
+            <label for="bkService">Service</label>
+            <select id="bkService" required>
+              <option value="" disabled selected>Select a service</option>
+              <option value="ac">AC &amp; Cooling</option>
+              <option value="plumbing">Plumbing</option>
+              <option value="electrical">Electrical</option>
+              <option value="cleaning">Home Cleaning</option>
+              <option value="pest">Pest Control</option>
+              <option value="carpentry">Carpentry &amp; Aluminium</option>
+              <option value="painting">Painting &amp; Finishing</option>
+              <option value="moving">Moving &amp; Installation</option>
+              <option value="specialized">Specialized Services</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="bkArea">Governorate</label>
+            <select id="bkArea" required>
+              <option value="" disabled selected>Select a governorate</option>
+              <option value="capital">Capital</option>
+              <option value="muharraq">Muharraq</option>
+              <option value="northern">Northern</option>
+              <option value="southern">Southern</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="bkDate">Date</label>
+            <input type="date" id="bkDate" required />
+          </div>
+          <div class="field">
+            <label for="bkPhone">Phone (+973)</label>
+            <input type="tel" id="bkPhone" inputmode="numeric" maxlength="8" placeholder="12345678" required pattern="\d{8}" />
+          </div>
+          <div class="field">
+            <label for="bkNotes">Notes (optional)</label>
+            <textarea id="bkNotes" rows="2" placeholder="Brief description of the issue or service needed"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block" id="bkSubmit">Submit Request</button>
+          <p class="field-note">We will confirm your request by phone or WhatsApp. Data is used for verification only.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TRUST STRIP ===== -->
+  <section class="trust" aria-label="Why trust us">
+    <div class="container trust-grid">
+      <div class="trust-item">
+        <span class="trust-icon">✓</span>
+        <h3>Confirmation Before Start</h3>
+        <p>Every request is verified by phone before service begins.</p>
+      </div>
+      <div class="trust-item">
+        <span class="trust-icon">⏱</span>
+        <h3>On-Time Arrival</h3>
+        <p>We commit to a specific time window with live tracking.</p>
+      </div>
+      <div class="trust-item">
+        <span class="trust-icon">🛡</span>
+        <h3>Service Guarantee</h3>
+        <p>Our work is covered by a quality warranty.</p>
+      </div>
+      <div class="trust-item">
+        <span class="trust-icon">💬</span>
+        <h3>24/7 Support</h3>
+        <p>Our support team is available around the clock.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="sec-head">
+        <span class="sec-eyebrow">Our Services</span>
+        <h2>Everything Your Home Needs</h2>
+        <p>Nine core service categories covering maintenance, cleaning, and finishing.</p>
+      </div>
+      <div class="services-grid">
+        <article class="svc-card" data-svc="ac">
+          <div class="svc-ico" aria-hidden="true">❄</div>
+          <h3>AC &amp; Cooling</h3>
+          <p>Repair, deep clean, leak detection, refrigerant top-up, and new unit installation.</p>
+          <a href="#booking" class="svc-link" data-svc="ac">Book this service</a>
+        </article>
+        <article class="svc-card" data-svc="plumbing">
+          <div class="svc-ico" aria-hidden="true">🔧</div>
+          <h3>Plumbing</h3>
+          <p>Leak repair, clog clearing, faucet and tank installation, and drain inspection.</p>
+          <a href="#booking" class="svc-link" data-svc="plumbing">Book this service</a>
+        </article>
+        <article class="svc-card" data-svc="electrical">
+          <div class="svc-ico" aria-hidden="true">⚡</div>
+          <h3>Electrical</h3>
+          <p>Repairs, panel setup, electrical load, lighting, and fault diagnosis.</p>
+          <a href="#booking" class="svc-link" data-svc="electrical">Book this service</a>
+        </article>
+        <article class="svc-card" data-svc="cleaning">
+          <div class="svc-ico" aria-hidden="true">🧹</div>
+          <h3>Home Cleaning</h3>
+          <p>Full home clean, deep clean, post-construction, and carpet &amp; upholstery wash.</p>
+          <a href="#booking" class="svc-link" data-svc="cleaning">Book this service</a>
+        </article>
+        <article class="svc-card" data-svc="pest">
+          <div class="svc-ico" aria-hidden="true">🛡</div>
+          <h3>Pest Control</h3>
+          <p>Safe pesticide treatment, preventive spraying, and rodent control.</p>
+          <a href="#booking" class="svc-link" data-svc="pest">Book this service</a>
+        </article>
+        <article class="svc-card" data-svc="carpentry">
+          <div class="svc-ico" aria-hidden="true">🪚</div>
+          <h3>Carpentry &amp; Aluminium</h3>
+          <p>Door &amp; window repair, aluminium fitting, woodwork and finishing.</p>
+          <a href="#booking" class="svc-link" data-svc="carpentry">Book this service</a>
+        </article>
+        <article class="svc-card" data-svc="painting">
+          <div class="svc-ico" aria-hidden="true">🎨</div>
+          <h3>Painting &amp; Finishing</h3>
+          <p>Interior and exterior painting, plastering, tiling, and finishing repairs.</p>
+          <a href="#booking" class="svc-link" data-svc="painting">Book this service</a>
+        </article>
+        <article class="svc-card" data-svc="moving">
+          <div class="svc-ico" aria-hidden="true">📦</div>
+          <h3>Moving &amp; Installation</h3>
+          <p>Furniture moving, appliance installation, and careful wrapping &amp; securing.</p>
+          <a href="#booking" class="svc-link" data-svc="moving">Book this service</a>
+        </article>
+        <article class="svc-card" data-svc="specialized">
+          <div class="svc-ico" aria-hidden="true">✦</div>
+          <h3>Specialized Services</h3>
+          <p>Custom services on demand — consultation, advanced maintenance, and projects.</p>
+          <a href="#booking" class="svc-link" data-svc="specialized">Book this service</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HOW IT WORKS ===== -->
+  <section class="section section-alt" id="how">
+    <div class="container">
+      <div class="sec-head">
+        <span class="sec-eyebrow">How It Works</span>
+        <h2>Four Simple Steps</h2>
+      </div>
+      <ol class="steps">
+        <li class="step">
+          <span class="step-num">1</span>
+          <h3>Pick a Service</h3>
+          <p>Choose the service type, governorate, and area.</p>
+        </li>
+        <li class="step">
+          <span class="step-num">2</span>
+          <h3>Set a Time</h3>
+          <p>Select a date and the time window that suits you.</p>
+        </li>
+        <li class="step">
+          <span class="step-num">3</span>
+          <h3>Confirm Your Request</h3>
+          <p>We reach out by phone or WhatsApp to confirm the details.</p>
+        </li>
+        <li class="step">
+          <span class="step-num">4</span>
+          <h3>Receive the Service</h3>
+          <p>A qualified technician arrives on time with a quality guarantee.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===== WHY ===== -->
+  <section class="section" id="why">
+    <div class="container">
+      <div class="sec-head">
+        <span class="sec-eyebrow">Why SERVO</span>
+        <h2>Trust, Quality, Speed</h2>
+        <p>SERVO is built to be a reliable home services platform in Bahrain — no false advertising.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-item">
+          <h3>Full Transparency</h3>
+          <p>Clear pricing, request status tracking, and confirmation before any commitment.</p>
+        </div>
+        <div class="why-item">
+          <h3>Widespread Coverage</h3>
+          <p>Capital, Muharraq, Northern, and Southern — wherever you are.</p>
+        </div>
+        <div class="why-item">
+          <h3>After-Service Support</h3>
+          <p>We follow up after you receive the service, not just before.</p>
+        </div>
+        <div class="why-item">
+          <h3>Bilingual — AR &amp; EN</h3>
+          <p>Full Arabic and English interfaces, with equal quality.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== AREAS ===== -->
+  <section class="section section-alt" id="areas">
+    <div class="container">
+      <div class="sec-head">
+        <span class="sec-eyebrow">Coverage Areas</span>
+        <h2>Where We Operate</h2>
+      </div>
+      <div class="areas-grid">
+        <div class="area"><h3>Capital</h3><p>Al Riffa, Al Hamlam, Manama, Aali, Al Sohari</p></div>
+        <div class="area"><h3>Muharraq</h3><p>City, Safat, Sitra, Al Hadd (North)</p></div>
+        <div class="area"><h3>Northern</h3><p>Muharraq North, Al Jasra, Al Buhari</p></div>
+        <div class="area"><h3>Southern</h3><p>Al Riffa South, Corniche, Al Zubara</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section" id="contact">
+    <div class="container contact">
+      <div class="sec-head sec-center">
+        <span class="sec-eyebrow">Contact Us</span>
+        <h2>We're Ready to Serve You</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-item">
+          <span class="c-ico">📞</span>
+          <h3>Phone</h3>
+          <p><a href="tel:+973-1700-0000" dir="ltr">+973 1700 0000</a></p>
+        </div>
+        <div class="contact-item">
+          <span class="c-ico">💬</span>
+          <h3>WhatsApp</h3>
+          <p><a href="https://wa.me/97317000000" target="_blank" rel="noopener">Message us on WhatsApp</a></p>
+        </div>
+        <div class="contact-item">
+          <span class="c-ico">✉</span>
+          <h3>Email</h3>
+          <p><a href="mailto:hello@servo.bh">hello@servo.bh</a></p>
+        </div>
+        <div class="contact-item">
+          <span class="c-ico">🕑</span>
+          <h3>Hours</h3>
+          <p>Sat – Thu · 8:00 AM – 8:00 PM</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="f-col f-brand">
+        <div class="brand brand-sm">
+          <span class="brand-mark">
+            <svg width="28" height="28" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="2" y="2" width="32" height="32" rx="8" fill="#0E5A7A"/>
+              <path d="M18 9 L27 22 H22.5 L18 14.5 L13.5 22 H9 L18 9 Z" fill="#D4B483"/>
+            </svg>
+          </span>
+          <span class="brand-text"><strong>SERVO</strong><small>Home Services</small></span>
+        </div>
+        <p class="f-tag">The trusted home services platform in the Kingdom of Bahrain.</p>
+        <div class="f-cta"><a href="#booking" class="btn btn-primary">Book Now</a></div>
+      </div>
+      <div class="f-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">AC &amp; Cooling</a></li>
+          <li><a href="#services">Plumbing &amp; Electrical</a></li>
+          <li><a href="#services">Deep Cleaning</a></li>
+          <li><a href="#services">Pest Control</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h4>Platform</h4>
+        <ul>
+          <li><a href="#how">How It Works</a></li>
+          <li><a href="#why">Why SERVO</a></li>
+          <li><a href="#areas">Coverage</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Terms &amp; Conditions</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Cancellation Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="f-bottom container">
+      <p>© 2026 SERVO. All rights reserved.</p>
+      <p class="f-en"><a href="index.html">العربية</a></p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
