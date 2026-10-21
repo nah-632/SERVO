@@ -42,6 +42,10 @@
 
 html { scroll-behavior: smooth; }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-en);
   background: var(--warm-100);
@@ -54,6 +58,8 @@ body {
 body.page-ar {
   font-family: var(--font-ar);
 }
+
+/* Prevent hero background from hiding content — z-index on .hero-inner */
 
 /* ===== LAYOUT ===== */
 .container {
@@ -274,11 +280,8 @@ body.page-ar {
 /* ===== HERO ===== */
 .hero {
   position: relative;
-  min-height: calc(100vh - var(--header-h));
   padding: calc(var(--header-h) + 48px) 0 64px;
   overflow: hidden;
-  display: flex;
-  align-items: center;
 }
 
 .hero-bg {
@@ -289,6 +292,7 @@ body.page-ar {
     radial-gradient(ellipse at 20% 80%, rgba(212,180,131,0.18) 0%, transparent 55%),
     linear-gradient(160deg, var(--navy-900) 0%, var(--navy) 45%, var(--teal) 100%);
   z-index: 0;
+  pointer-events: none;
 }
 
 .hero-bg::after {
@@ -311,7 +315,7 @@ body.page-ar {
   display: grid;
   grid-template-columns: 1fr 420px;
   gap: 48px;
-  align-items: center;
+  align-items: start;
 }
 
 .hero-eyebrow {
@@ -322,8 +326,6 @@ body.page-ar {
   text-transform: uppercase;
   color: var(--sand-300);
   margin-bottom: 18px;
-  opacity: 0;
-  animation: fadeUp 0.6s 0.1s ease forwards;
 }
 
 .hero-copy h1 {
@@ -332,8 +334,6 @@ body.page-ar {
   color: var(--white);
   line-height: 1.15;
   margin-bottom: 18px;
-  opacity: 0;
-  animation: fadeUp 0.6s 0.25s ease forwards;
 }
 
 .hero-copy h1 .grad {
@@ -349,8 +349,7 @@ body.page-ar {
   line-height: 1.7;
   margin-bottom: 32px;
   max-width: 500px;
-  opacity: 0;
-  animation: fadeUp 0.6s 0.4s ease forwards;
+  
 }
 
 .hero-actions {
@@ -358,16 +357,14 @@ body.page-ar {
   gap: 14px;
   flex-wrap: wrap;
   margin-bottom: 40px;
-  opacity: 0;
-  animation: fadeUp 0.6s 0.55s ease forwards;
+  
 }
 
 .hero-stats {
   display: flex;
   gap: 36px;
   list-style: none;
-  opacity: 0;
-  animation: fadeUp 0.6s 0.7s ease forwards;
+  
 }
 
 .hero-stats li {
@@ -442,8 +439,7 @@ body.page-ar {
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lg);
   padding: 32px 28px;
-  opacity: 0;
-  animation: fadeUp 0.6s 0.5s ease forwards;
+  
   position: relative;
   overflow: hidden;
 }
