@@ -97,14 +97,11 @@
   var heroCopy = document.querySelector(".hero__copy");
 
   function armHero() {
-    if (!hero) return;
+    if (!hero || hero.classList.contains("is-ready")) return;
+    /* add directly, no rAF — CSS transition handles the entrance */
+    hero.classList.add("is-ready");
     if (!RM && heroImg) {
-      requestAnimationFrame(function () {
-        hero.classList.add("is-ready");
-        setTimeout(function () { heroImg.style.willChange = "auto"; }, 2500);
-      });
-    } else {
-      hero.classList.add("is-ready");
+      setTimeout(function () { heroImg.style.willChange = "auto"; }, 2500);
     }
   }
 

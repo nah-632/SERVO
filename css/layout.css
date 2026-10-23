@@ -235,7 +235,7 @@ html.no-js .hero__img {
   color: var(--gold);
 }
 .reveal-line { display: block; overflow: hidden; }
-.reveal-line > span {
+html.js .reveal-line > span {
   display: block;
   transform: translateY(110%);
   transition: transform 800ms var(--ease);
