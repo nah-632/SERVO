@@ -1,0 +1,330 @@
+/* SERVO — base: tokens, reset, typography */
+
+:root {
+  /* الهوية */
+  --navy: #082D44;
+  --navy-deep: #051c2c;
+  --teal: #0E5A7A;
+  --gold: #D4B483;
+  --cream: #F8F6F2;
+  --char: #17232C;
+
+  /* مشتقات */
+  --navy-08: rgba(8, 45, 68, .08);
+  --gold-15: rgba(212, 180, 131, .15);
+  --gold-40: rgba(212, 180, 131, .4);
+  --ink: #22303c;
+  --ink-soft: #4a5a68;
+  --line: #e4ddd1;
+  --line-dark: rgba(212, 180, 131, .22);
+
+  /* الخطوط */
+  --font-display: "Noto Kufi Arabic", system-ui, sans-serif;
+  --font-body: "IBM Plex Sans Arabic", system-ui, sans-serif;
+  --font-num: "Montserrat", system-ui, sans-serif;
+
+  /* المقاسات */
+  --step-0: 0.9375rem;   /* 15 */
+  --step-1: 1.0625rem;   /* 17 */
+  --step-2: 1.25rem;     /* 20 */
+  --step-3: 1.5rem;      /* 24 */
+  --step-4: 2rem;        /* 32 */
+  --step-5: 2.75rem;     /* 44 */
+  --step-6: 4rem;        /* 64 */
+  --step-7: 6.5rem;      /* 104 */
+
+  /* المسافات */
+  --s-1: 0.5rem;
+  --s-2: 1rem;
+  --s-3: 1.5rem;
+  --s-5: 2.5rem;
+  --s-8: 4rem;
+  --s-13: 6.5rem;
+
+  /* الحواف حادة أنيقة */
+  --r-0: 2px;
+  --r-99: 999px;
+
+  /* الحركة */
+  --ease: cubic-bezier(.2, .7, .2, 1);
+  --t-1: 250ms;
+  --t-2: 400ms;
+  --t-3: 600ms;
+  --t-4: 900ms;
+
+  --container: 72rem;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--step-0);
+  line-height: 1.8;
+  color: var(--ink);
+  background: var(--cream);
+  font-feature-settings: "kern";
+  letter-spacing: 0;
+  overflow-x: hidden;
+}
+
+/* أرقام لاتينية موحّدة عبر كل الصفحات */
+.num, time, [data-num] { font-family: var(--font-num); }
+
+::selection { background: var(--gold); color: var(--navy-deep); }
+
+/* شريط تمرير رفيع */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: var(--navy-deep); }
+::-webkit-scrollbar-thumb { background: var(--teal); border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: var(--gold); }
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: 0;
+  text-wrap: balance;
+}
+
+p { text-wrap: pretty; }
+
+a { color: inherit; text-decoration: none; }
+img, picture { display: block; max-width: 100%; }
+img { height: auto; }
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: var(--r-0);
+}
+
+/* حاوية */
+.container {
+  width: min(100% - 2.5rem, var(--container));
+  margin-inline: auto;
+}
+
+/* قسم — إيقاع أقسام متفاوت بقصد */
+.section { padding-block: var(--s-13); }
+.section--tight { padding-block: var(--s-8); }
+
+.section-head {
+  margin-bottom: var(--s-5);
+}
+.section-head .kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-1);
+  font-size: var(--step-0);
+  font-weight: 500;
+  color: var(--teal);
+  margin-bottom: var(--s-2);
+}
+.section-head .kicker::before {
+  content: "";
+  width: 2.5rem;
+  height: 1px;
+  background: var(--gold);
+}
+
+/* أزرار — حواف حادة أنيقة */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  min-height: 48px;
+  padding: 0.875rem 1.75rem;
+  font-family: var(--font-body);
+  font-size: var(--step-0);
+  font-weight: 600;
+  line-height: 1;
+  border-radius: var(--r-0);
+  transition: transform var(--t-1) var(--ease),
+              background-color var(--t-1) var(--ease),
+              color var(--t-1) var(--ease),
+              border-color var(--t-1) var(--ease),
+              box-shadow var(--t-1) var(--ease);
+  position: relative;
+}
+.btn:active { transform: scale(.98); }
+
+.btn--primary {
+  background: var(--navy);
+  color: var(--cream);
+  border: 1px solid var(--navy);
+}
+.btn--primary:hover {
+  background: var(--teal);
+  border-color: var(--teal);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(8, 45, 68, .25);
+}
+.btn--primary::after {
+  content: "";
+  position: absolute;
+  inset-inline-start: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: inline-start;
+  transition: transform var(--t-2) var(--ease);
+}
+.btn--primary:hover::after { transform: scaleX(1); }
+
+.btn--ghost {
+  background: transparent;
+  color: var(--cream);
+  border: 1px solid var(--gold-40);
+}
+.btn--ghost:hover {
+  border-color: var(--gold);
+  background: var(--gold-15);
+  transform: translateY(-1px);
+}
+
+.btn--dark {
+  background: var(--navy);
+  color: var(--cream);
+  border: 1px solid var(--navy);
+}
+.btn--dark:hover { background: var(--teal); }
+
+.btn[disabled] {
+  opacity: .45;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* تسمية رفع (floating label) */
+.field { position: relative; }
+.field label {
+  position: absolute;
+  inset-inline-start: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: var(--step-0);
+  color: var(--ink-soft);
+  pointer-events: none;
+  transition: top var(--t-1) var(--ease),
+              font-size var(--t-1) var(--ease),
+              color var(--t-1) var(--ease);
+  line-height: 1;
+}
+.field input, .field select, .field textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--line);
+  padding: 0.9rem 0 0.55rem;
+  font: inherit;
+  color: var(--ink);
+  transition: border-color var(--t-1) var(--ease);
+}
+.field textarea {
+  border: 1px solid var(--line);
+  border-radius: var(--r-0);
+  min-height: 96px;
+  resize: vertical;
+}
+.field input:focus, .field select:focus, .field textarea:focus {
+  outline: none;
+  border-color: var(--teal);
+}
+.field.is-focus label,
+.field.is-filled label {
+  top: 0;
+  font-size: .75rem;
+  color: var(--teal);
+}
+/* خط ذهبي يمتد عند التركيز */
+.field::after {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  height: 1.5px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transition: transform var(--t-2) var(--ease);
+}
+.field.is-focus::after { transform: scaleX(1); }
+.field .field-error {
+  display: none;
+  font-size: .8rem;
+  color: #8a3b2a;
+  margin-top: .3rem;
+}
+.field.has-error input,
+.field.has-error select,
+.field.has-error textarea { border-color: #8a3b2a; }
+.field.has-error .field-error { display: block; }
+
+/* حالة تحقق */
+.check {
+  display: flex;
+  gap: .75rem;
+  align-items: flex-start;
+  cursor: pointer;
+}
+.check input {
+  appearance: none;
+  flex: 0 0 auto;
+  width: 20px;
+  height: 20px;
+  border: 1.5px solid var(--line);
+  border-radius: var(--r-0);
+  background: var(--cream);
+  cursor: pointer;
+  position: relative;
+  transition: border-color var(--t-1) var(--ease), background var(--t-1) var(--ease);
+  margin-top: 2px;
+}
+.check input:checked {
+  background: var(--navy);
+  border-color: var(--navy);
+}
+.check input:checked::after {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  background: var(--gold);
+  clip-path: polygon(14% 47%, 0 61%, 40% 100%, 100% 16%, 86% 4%, 41% 76%);
+}
+.check span { font-size: .875rem; line-height: 1.65; color: var(--ink-soft); }
+.check input:focus-visible { outline-offset: 4px; }
+
+/* خلفية قسم كحلي بدوائر ذهبية خافتة */
+.navy-panel {
+  position: relative;
+  background: var(--navy);
+  color: var(--cream);
+  overflow: hidden;
+}
+.navy-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(42rem 42rem at 85% -10%, var(--gold-15), transparent 60%),
+    radial-gradient(30rem 30rem at 10% 110%, rgba(14, 90, 122, .25), transparent 60%);
+  pointer-events: none;
+}
+.navy-panel .container { position: relative; z-index: 1; }

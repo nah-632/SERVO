@@ -1,0 +1,135 @@
+/* خطوط مضمّنة محلياً — لا أي طلب خارجي */
+
+/* Noto Kufi Arabic — العناوين العربية */
+@font-face {
+  font-family: "Noto Kufi Arabic";
+  src: url("../assets/fonts/noto-kufi-arabic-400-arabic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0600-06FF, U+0750-077F, U+0870-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2026, U+203C, U+2045, U+2190-21FF, U+FB50-FDFF, U+FE70-FEFF;
+}
+@font-face {
+  font-family: "Noto Kufi Arabic";
+  src: url("../assets/fonts/noto-kufi-arabic-400-latin.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0020-007E, U+2013-2014, U+2018-201D, U+2026, U+2026, U+2190-21FF;
+}
+@font-face {
+  font-family: "Noto Kufi Arabic";
+  src: url("../assets/fonts/noto-kufi-arabic-600-arabic.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0600-06FF, U+0750-077F, U+0870-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2026, U+203C, U+2045, U+2190-21FF, U+FB50-FDFF, U+FE70-FEFF;
+}
+@font-face {
+  font-family: "Noto Kufi Arabic";
+  src: url("../assets/fonts/noto-kufi-arabic-600-latin.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0020-007E, U+2013-2014, U+2018-201D, U+2026, U+2190-21FF;
+}
+@font-face {
+  font-family: "Noto Kufi Arabic";
+  src: url("../assets/fonts/noto-kufi-arabic-700-arabic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0600-06FF, U+0750-077F, U+0870-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2026, U+203C, U+2045, U+2190-21FF, U+FB50-FDFF, U+FE70-FEFF;
+}
+@font-face {
+  font-family: "Noto Kufi Arabic";
+  src: url("../assets/fonts/noto-kufi-arabic-700-latin.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0020-007E, U+2013-2014, U+2018-201D, U+2026, U+2190-21FF;
+}
+
+/* IBM Plex Sans Arabic — النص العربي */
+@font-face {
+  font-family: "IBM Plex Sans Arabic";
+  src: url("../assets/fonts/ibm-plex-sans-arabic-400-arabic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0600-06FF, U+0750-077F, U+0870-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2026, U+203C, U+2045, U+2190-21FF, U+FB50-FDFF, U+FE70-FEFF;
+}
+@font-face {
+  font-family: "IBM Plex Sans Arabic";
+  src: url("../assets/fonts/ibm-plex-sans-arabic-400-latin.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0020-007E, U+2013-2014, U+2018-201D, U+2026, U+2190-21FF;
+}
+@font-face {
+  font-family: "IBM Plex Sans Arabic";
+  src: url("../assets/fonts/ibm-plex-sans-arabic-500-arabic.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0600-06FF, U+0750-077F, U+0870-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2026, U+203C, U+2045, U+2190-21FF, U+FB50-FDFF, U+FE70-FEFF;
+}
+@font-face {
+  font-family: "IBM Plex Sans Arabic";
+  src: url("../assets/fonts/ibm-plex-sans-arabic-500-latin.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0020-007E, U+2013-2014, U+2018-201D, U+2026, U+2190-21FF;
+}
+@font-face {
+  font-family: "IBM Plex Sans Arabic";
+  src: url("../assets/fonts/ibm-plex-sans-arabic-600-arabic.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0600-06FF, U+0750-077F, U+0870-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2026, U+203C, U+2045, U+2190-21FF, U+FB50-FDFF, U+FE70-FEFF;
+}
+@font-face {
+  font-family: "IBM Plex Sans Arabic";
+  src: url("../assets/fonts/ibm-plex-sans-arabic-600-latin.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0020-007E, U+2013-2014, U+2018-201D, U+2026, U+2190-21FF;
+}
+
+/* Montserrat — اللاتيني والأرقام */
+@font-face {
+  font-family: "Montserrat";
+  src: url("../assets/fonts/montserrat-400-latin.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0020-007E, U+2013-2014, U+2018-201D, U+2026;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../assets/fonts/montserrat-500-latin.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0020-007E, U+2013-2014, U+2018-201D, U+2026;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../assets/fonts/montserrat-600-latin.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0020-007E, U+2013-2014, U+2018-201D, U+2026;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../assets/fonts/montserrat-700-latin.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0020-007E, U+2013-2014, U+2018-201D, U+2026;
+}

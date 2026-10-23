@@ -1,0 +1,14 @@
+{
+  "name": "سيرفو — خدمات منزلية",
+  "short_name": "سيرفو",
+  "dir": "rtl",
+  "lang": "ar",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#051c2c",
+  "theme_color": "#082D44",
+  "icons": [
+    {"src": "icons/favicon-180.png", "sizes": "180x180", "type": "image/png", "purpose": "any"},
+    {"src": "icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+  ]
+}

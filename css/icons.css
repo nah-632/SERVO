@@ -1,0 +1,36 @@
+/* SERVO — أيقونات الخدمة */
+
+.svc__icon svg { width: 26px; height: 26px; }
+.svc__icon, .svc__panel-grad svg {
+  display: grid;
+  place-items: center;
+}
+
+/* رسم الأيقونة — يتلوّن مع hover */
+.svc__icon {
+  display: grid;
+  place-items: center;
+  color: var(--teal);
+  transition: color var(--t-2) var(--ease);
+}
+.svc__row:hover .svc__icon,
+.svc.is-hover .svc__row .svc__icon {
+  color: var(--gold);
+}
+
+/* البديل — تدرج الهوية بدل صورة الدهان */
+.svc__panel-grad, .svc-peek__grad {
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(120% 90% at 85% 10%, var(--gold-15), transparent 55%),
+    linear-gradient(150deg, var(--navy) 0%, var(--navy-deep) 55%, var(--char) 100%);
+}
+.svc__panel-grad svg, .svc-peek__grad svg {
+  width: 56px;
+  height: 56px;
+  color: var(--gold);
+  opacity: .85;
+  transition: transform var(--t-2) var(--ease);
+}
+.svc__row:hover .svc__panel-grad svg { transform: scale(1.08); }
