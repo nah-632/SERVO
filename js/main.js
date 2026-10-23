@@ -124,6 +124,7 @@
       if (pRaf) return;
       pRaf = requestAnimationFrame(function () {
         pRaf = null;
+        if (!heroH) return;
         var y = window.scrollY;
         if (y > heroH * 1.5) return;
         var maxShift = heroH * 0.08;
