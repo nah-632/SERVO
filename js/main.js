@@ -93,7 +93,7 @@
 
   /* ---------- hero: ready + parallax ---------- */
   var hero = document.getElementById("hero");
-  var heroImg = document.querySelector(".hero__img");
+  var heroImg = document.getElementById("heroImg");
   var heroCopy = document.querySelector(".hero__copy");
 
   function armHero() {
@@ -118,7 +118,7 @@
   window.addEventListener("load", function () { measure(); safeArm(); });
   window.addEventListener("resize", measure, { passive: true });
 
-  if (hero && heroImg && !RM) {
+  if (heroImg && !RM) {
     var pRaf = null;
     window.addEventListener("scroll", function () {
       if (pRaf) return;

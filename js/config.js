@@ -15,3 +15,5 @@ const SITE = {
   ],
   governorates: ["العاصمة", "المحرق", "الشمالية", "الجنوبية"],
 };
+
+window.SERVO = SITE;
