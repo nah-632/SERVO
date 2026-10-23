@@ -108,12 +108,17 @@
     }
   }
 
-  /* arm on load; DOMContentLoaded fallback covers slow images */
-  window.addEventListener("load", function () { measure(); armHero(); });
-  document.addEventListener("DOMContentLoaded", function () {
-    /* if hero not ready after DOM ready + a short grace, arm anyway */
-    setTimeout(function () { if (!hero.classList.contains("is-ready")) armHero(); }, 300);
-  });
+  /* Arm as soon as possible; guard against load firing before we attach */
+  function safeArm() {
+    if (!hero || hero.classList.contains("is-ready")) return;
+    armHero();
+  }
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", function () { setTimeout(safeArm, 150); });
+  } else {
+    setTimeout(safeArm, 150);
+  }
+  window.addEventListener("load", function () { measure(); safeArm(); });
   window.addEventListener("resize", measure, { passive: true });
 
   if (hero && heroImg && !RM) {
