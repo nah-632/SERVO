@@ -96,19 +96,23 @@
   var heroImg = document.querySelector(".hero__img");
   var heroCopy = document.querySelector(".hero__copy");
 
-  window.addEventListener("load", function () {
-    measure();
-    if (hero) {
-      if (!RM && heroImg) {
-        /* CSS starts img at scale(1.12); adding is-ready transitions it to scale(1) */
-        requestAnimationFrame(function () {
-          hero.classList.add("is-ready");
-          setTimeout(function () { heroImg.style.willChange = "auto"; }, 2500);
-        });
-      } else {
+  function armHero() {
+    if (!hero) return;
+    if (!RM && heroImg) {
+      requestAnimationFrame(function () {
         hero.classList.add("is-ready");
-      }
+        setTimeout(function () { heroImg.style.willChange = "auto"; }, 2500);
+      });
+    } else {
+      hero.classList.add("is-ready");
     }
+  }
+
+  /* arm on load; DOMContentLoaded fallback covers slow images */
+  window.addEventListener("load", function () { measure(); armHero(); });
+  document.addEventListener("DOMContentLoaded", function () {
+    /* if hero not ready after DOM ready + a short grace, arm anyway */
+    setTimeout(function () { if (!hero.classList.contains("is-ready")) armHero(); }, 300);
   });
   window.addEventListener("resize", measure, { passive: true });
 
